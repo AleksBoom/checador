@@ -1,0 +1,118 @@
+body{ 
+    /*background-color: rgb(255, 255, 255);*/
+    background-color: #fafafc;
+
+}
+
+     
+}
+/*--   contenedor  ---*/
+#contenedor {
+    margin: 0px auto;
+}
+
+/*--   encabezado ---*/
+
+header {
+    font-family: Helvetica;
+    font-size: 1.5em;
+    top: 0px;
+    width: 85%;
+    height:2.2em;
+    padding: 1% 2%;
+    margin: 1% auto;
+    color: #fff;
+    background-color: rgba(0,0,0,0.2);
+    -ms-box-shadow:  0px 0px 12px #000;
+    -moz-box-shadow:  0px 0px 12px #000;
+    -webkit-box-shadow:  0px 12px 0px #000;
+    -o-box-shadow:  0px 0px 12px #000;
+    box-shadow:  0px 0px 12px #000;
+}
+
+/*//////////////////////////////////////////////////////////////////
+                    inicia login.html
+//////////////////////////////////////////////////////////////////*/
+
+#login {
+    /* background-color: #fff; */
+    background: -webkit-linear-gradient(-5deg,#d8dbea,#f6f7fb); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(-5deg,#d8dbea,#f6f7fb); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(-5deg,#d8dbea,#f6f7fb); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(-5deg,#d8dbea,#f6f7fb); /* Standard syntax (must be last) */
+    width: 25%;
+    padding: 1%;
+    margin: 7% auto;
+    border: 1px solid #767676;
+    border-radius: 8px;
+    box-shadow: -4px 4px 16px #aaaaaa;
+}
+/*--   texto  "login" ---*/
+
+ form h1{
+     font-family: Helvetica;
+     color: black;
+     text-align:  center;
+     font-size: 250%;
+}
+/*--   texto "ingresar" ---*/
+form h2{
+    font-family: Helvetica;
+    color: aliceblue;
+    text-align: center;
+    font-size: 50%;
+    
+}
+/*--   recuadros txt ---*/
+
+form input {
+    width: 60%;
+    height: 20px;
+    margin: 1% 20%;
+    color: #532406; /*#ff6200;*/
+    background-color: #f0f0f0;
+    text-align: center;
+    border-radius: 5px;
+}
+/*--   botones ---*/
+
+form button {
+    /* background-color: #0b9f1c; */
+    background: -webkit-linear-gradient(0deg,#5b9048,#72ba64,#7fce6f); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(0deg,#5b9048,#72ba64,#7fce6f); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(0deg,#5b9048,#72ba64,#7fce6f); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(0deg,#5b9048,#72ba64,#7fce6f); /* Standard syntax (must be last) */
+    font-family: Helvetica;
+    font-size: 20px;
+    color: #fff;
+    width: 40%;
+    height: 30px;
+    margin: 5% 30%;
+    border: gray 2px solid;
+    border-radius: 7px;
+    box-shadow: 0px 2px 0px;
+}
+/*//////////////////////////////////////////////////////////////////
+                   termina  login.html
+//////////////////////////////////////////////////////////////////*/
+
+/*////////////////--   pie de pagina ---//////////////////////////*/
+footer {
+    background-color: rgba(0,0,0,0.2);
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 1.5em;
+    width: 85%;
+    height:2.2em;
+    padding: 1% 2%;
+    margin: 1% auto;
+    ms-box-shadow:  0px 0px 12px #000;
+    -moz-box-shadow:  0px 0px 12px #000;
+    -webkit-box-shadow:  0px 0px 12px #000;
+    -o-box-shadow:  0px 0px 12px #000;
+    box-shadow:  0px 0px 12px #000;
+}
+
+.muted {
+  color: #0c3da3;
+}
