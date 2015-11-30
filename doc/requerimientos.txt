@@ -8,7 +8,7 @@ Requerimientos
 -Calculo de horas laboradas por periodo
 -lista de dias asistidos
 -Control de retardos
--Defenicion de horarios laborales
+-Definicion de horarios laborales
 -Bono de puntualidad
 -Control de faltas. A la trecera Bye!
 -Horas extras

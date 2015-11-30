@@ -1,0 +1,60 @@
+<div class="contenedor">
+<h1>BUENOS DÍAS</h1>
+                <div id="formulario"><!--Aquí va el formulario-->
+                  <form action="index.php" method="get"
+                  enctype="application/x-www-form-urlencoded">
+                      <div class="input">
+                        <input type="text" name="user" placeholder="Usuario" />
+                      </div>
+                      <div class="input">
+                        <input type="password" id="pass" name="pass" placeholder="Contraseña" required onekeyup="valida()" />
+
+                      </div>
+                    <!--div id=msj-->
+                    <div id="msg"></div>
+                    <!--Termina id msj-->
+                      <input type="hidden" name="enviar_hdn" value="post" />
+                      <button id="ingresar" type="submit">Entrar</button>
+                  <!--<div id="form-footer">Gracia</div>-->
+                      <a class="boton" href="registro.php">¿Eres nuevo?</a>
+              </div>
+                </form>
+
+               <script>
+                   /*Código en js para validar la longitud del campo de password*/
+                   function valida() {
+                       /*realiza la acción de validar. Nosotros la nombranos en la línea 28
+                       como valida.*/
+
+                       var pass = document.getElementById('pass').value;
+
+                       /*Var pass es el equivalente al campo input del password de html*/
+
+                       /* long será la longitud del password escrito por el usuario*/
+                       var long = pass.length;
+                       var input = document.getElementById('pass');
+                       var ingresar = document.getElementById('ingresar');
+                       var mensaje = document.getElementById('msg');
+
+
+
+                       /*Se usa input y no pass por que el CSS se aplica a html, no a texto*/
+                       if(long >=8) {
+
+                         /*Botón en verde activo*/
+                         input.style.backgroundColor ="#00ff00";
+                         ingresar.disabled = false;
+
+                       } else {
+                         /*Botón en rojo inactivo*/
+                         input.style.backgroundColor = "#ff9999";
+                         ingresar.disabled = true;
+                       }
+                       document.getElementById('msg').innerHTML = "Contraseña mínima: 8 caracteres";
+
+
+
+                   }
+
+               </script>
+</div>

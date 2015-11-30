@@ -53,10 +53,19 @@ h2 {
 	font-family: "Montserrat",sans-serif;
 }
 
+#msg {
+    color: #eaeaea;
+    font-family: "lato", sans-serif;
+    font-weight: 900 bold;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: auto;
+
+}
 #check {
 	margin: 10px;
 	padding: 0, 40px;
-	height: auto;
+	height: 480px;
 
 
 
@@ -64,18 +73,13 @@ h2 {
 #formulario {
 	margin: 10px;
 	padding: 0, 40px;
-	height: 640px;
+	height: 380px;
 }
 
 
-/*div.registro{
-	height: auto;
-	margin: 10px;
-	opacity: 0.9;
-	text-align: center;
-	width: 400px;
-}
-div.invalido*/
+
+
+
 
 
 /*-----------------------Usuario - Contraseña Registro.HTML--------------*/
