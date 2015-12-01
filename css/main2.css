@@ -48,6 +48,12 @@ h2 {
 }
 
 
+#invalido {
+	margin: 10px;
+	padding: 0, 40px;
+	height: 360px;
+}
+
 #registro {
 	font-family: "Montserrat",sans-serif;
 }
@@ -66,19 +72,37 @@ h2 {
 	padding: 0, 40px;
 	height: 480px;
 }
+
 #formulario {
 	margin: 10px;
 	padding: 0, 40px;
 	height: 380px;
 }
 
-#calendario 	{
-		height: 400px;
-		width: 400px;
-		background-color: #000;
-	}
+/*-----ESTILOS DE BITÁCORA(CALENDARIO DE ASISTENCIA)-----*/
 
+#detalles {
+	text-align: center;
+	color: orange;
+	display: inline;
+}/*El inline permitio centrar esta madre*/
 
+#detalles tbody  {
+	color: #222222;
+	font-family: sans-serif;
+	padding: 5px;
+}
+
+th {
+	color: orange;
+	padding: 2px;
+}
+
+/*Este le da estilos a todas y cada una de las celdas*/
+
+#detalles td {
+	padding: 2px;
+}
 
 /*-----------------------Usuario - Contraseña Registro.HTML--------------*/
 
@@ -118,12 +142,7 @@ margin-bottom: 2px;
 
 
 /*-------------------BOTONES------------------*/
-
-
-
-
 #ingresar {
-
 	background-color: orange;
 	border-color: #58D3F7;
 	border-width: thin;
@@ -191,7 +210,7 @@ footer {
 
 @media screen and (max-width: 384px) {
 header {
-      width: 360px;
+      width: 384px;
       padding-bottom: 5px;
       padding-top: 10px;
     }
@@ -201,24 +220,54 @@ h1 {
 		text-align: center;
 }
 
+h2 {
+	color: orange;
+	font-size: 26px;
+	padding: 5px;
+}
+
+
 body {
-      width: 360px;
+      width: 384px;
 			height: 640px;
     }
 
 .contenedor {
-			width: 360px;
-			height: 640px;
+			width: 364px;
+			padding: 10px;
     }
 
-footer {
-      width: 360px;
-    }
-
+#invalido {
+			margin: 10px;
+			padding: 0, 20px;
+			height: 640;
 }
 
 
+/*-----ESTILOS DE BITÁCORA(CALENDARIO DE ASISTENCIA)-----*/
 
-/*Crear clase para calendario*/
+
+#detalles {
+	text-align: center;
+	color: orange;
+	display: inline;
+}/*El inline permitio centrar esta madre*/
+
+#detalles tbody  {
+	color: #222222;
+	font-family: sans-serif;
+	font-size: 14px;
+}
+
+/*Este le da estilos a todas y cada una de las celdas*/
+
+#detalles td {
+	padding: 1px;
+}
+
+footer {
+      width: 364px;
+			padding: 10px;
+		}
 /*Estilos para tableta1024px;
 768px;*/

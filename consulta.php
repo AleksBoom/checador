@@ -13,6 +13,7 @@
         <body>
             <header><b>LET'S GO TO CODE</b></header>
     <div class="contenedor">
+      <div id="bitacora">
       <?php
         if(isset($_GET['usuario'])){
           $user= $_GET['usuario'];
@@ -20,7 +21,7 @@
           $user="";
         }
         ?>
-      <h1>Historial: <?php echo $user; ?></h1>
+      <h2>Historial: <?php echo $user; ?></h2>
       <?php
       $servername = "localhost";
       $username = "checador";
@@ -39,12 +40,13 @@
         $result = mysqli_query($conn, $sql);
         $numrows = mysqli_num_rows($result);
       ?>
-      <table>
-        <tr><th>Fecha</th>
-        <th>HrEntrada</th>
-        <th>HrSalida</th>
+      <table id="detalles">
+        <tr>
+        <th>Fecha</th>
+        <th>Entrada</th>
+        <th>Salida</th>
         <th>Retardo</th>
-        <th>MinExtra<th>
+        <th>Min. Extra<th>
         </tr>
         <?php
         if($numrows>0){
@@ -80,8 +82,8 @@
         <a class="boton" href="index.php">Inicio</a>
         <br/><br />
       </p>
-
-    </div>
+        </div>
+  </div>
 
               <footer>
                  <p>&#128169;</p>
