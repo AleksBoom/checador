@@ -42,12 +42,11 @@ h2 {
 	/*background: url("../img/pixels.png") center;*/
 	background-color: #708090;
 	/*background-image:url('img/pixels.png');*/
-	height: auto;
+
 	font-family: 'Montserrat', sans-serif;
-	padding: 10px  5px ;
-
-
+	padding: 10px  20px ;
 }
+
 
 #registro {
 	font-family: "Montserrat",sans-serif;
@@ -60,15 +59,12 @@ h2 {
     text-align: center;
     font-size: 16px;
     margin-bottom: auto;
-
 }
+
 #check {
 	margin: 10px;
 	padding: 0, 40px;
 	height: 480px;
-
-
-
 }
 #formulario {
 	margin: 10px;
@@ -76,9 +72,11 @@ h2 {
 	height: 380px;
 }
 
-
-
-
+#calendario 	{
+		height: 400px;
+		width: 400px;
+		background-color: #000;
+	}
 
 
 
@@ -114,7 +112,7 @@ h2 {
 font-weight: 900 bold;
 text-align: center;
 font-size: 18px;
-margin-bottom: auto;
+margin-bottom: 2px;
 }
 
 
@@ -193,7 +191,7 @@ footer {
 
 @media screen and (max-width: 384px) {
 header {
-      width: 384px;
+      width: 360px;
       padding-bottom: 5px;
       padding-top: 10px;
     }
@@ -204,18 +202,23 @@ h1 {
 }
 
 body {
-      width: 384px;
+      width: 360px;
 			height: 640px;
     }
 
-#contenedor {
-      left: 50px;
-			height: 375px;
+.contenedor {
+			width: 360px;
+			height: 640px;
     }
 
 footer {
-      width: 364px;
-			padding: 10px;
+      width: 360px;
     }
 
 }
+
+
+
+/*Crear clase para calendario*/
+/*Estilos para tableta1024px;
+768px;*/

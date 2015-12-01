@@ -24,9 +24,9 @@
   if(!$conn){
     die("conección fallida:" . mysqli_connect_error());
   }
-  if(isset($_GET['user'])) {
+  if(isset($_GET['usuario'])) {
     /*Confirma si el uysuario ya ha proporcionado sus datos por medio del user*/
-    $user = $_GET['user'];
+    $user = $_GET['usuario'];
     $pass = $_GET['pass'];
 
     /*Ahora tenemos que comparar las variables de $user y $pass con laos valores que están en la base de datos*/
@@ -93,7 +93,7 @@
           	<div class="contenedor">
               <?php
               /*Cuando se debe incluir login.html*/
-              if(!isset($_GET['user'])){
+              if(!isset($_GET['usuario'])){
                   /*Cuando se entra al sistema por primera vez entramos acá*/
                   include("login.html");
               } else {

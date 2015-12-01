@@ -47,28 +47,19 @@
 
     </head>
         <body>
-        <header><b>BUENOS DÍAS ROBOT</b></header>
+        <header><a href="index.php"><b>BUENOS DÍAS ROBOT</b></a></header>
           	<div class="contenedor">
+
             <?php
-                  if (isset($_GET['user'])){
+                  if (isset($_GET['usuario'])){
                     /* Aquí vamos si tenemos info */
-                    $user = $_GET['user'];
+                    $user = $_GET['usuario'];
                     $nombre = $_GET['nombre'];
                     $apPat = $_GET['apPaterno'];
                     $apMat = $_GET['apMaterno'];
                     $pass = $_GET['password'];
                     $email = $_GET['email'];
                     $sexo = $_GET['sexo'];
-
-                  /* Los siguientes echos son para verifficar que se reciben la info de forma correcta pero ya está comentado
-                  echo $user."<br/>";
-                  echo $nombre."<br/>";
-                  echo $apPat."<br/>";
-                  echo $apMat."<br/>";
-                  echo $sexo."<br/>";
-
-                  */
-
 
                     /*realizar la conexión a la BD*/
                     $servername= "localhost";
@@ -80,47 +71,43 @@
 
                   //Checa el estado de la conexión.
                   if(!$conn){
-                    die("Conexión fallida: " . mysqli_connect_error());
-                  }
+                      die("Conexión fallida: " . mysqli_connect_error());
+                    }
 
 
                   /*Consulta la BD para saber si existe o no el $user*/
                   $sql ="SELECT usuario FROM Usuario WHERE usuario = '$user'";
                   $result = mysqli_query($conn,$sql);
                   $numrows = mysqli_num_rows($result);
-                  if(numrows) {
-                    /*Si el usuario existe nos vamos para acá*/
-                    /*Enviar mensaje y mostrar botón de riententar registro*/
-                  } else {
-                    /*Si el usuario no existe no vamos para acá*/
-                    /*Enviar flores, felicitarlo y lo que quieras hacer*/
-                    echo "Has sido muy creativo con tu usuario";
 
+                  if($numrows == 1) {
+                    echo "El usuario ya existe<br /><br /><a class='boton' href='registro.php'>Reintenta el registro</a>";
+
+                    } else {
                     /*Agregando el nuevo usuario a la BD*/
                     $sql = "INSERT INTO checador.Usuario (usuario, nombre, apPaterno, apMaterno, email, password, sexo) VALUES('$user', '$nombre', '$apPat', '$apMat', '$email', '$pass', '$sexo')";
+
                     $result=mysqli_query($conn, $sql);
-                    if(!result){
+
+                  if(!$result){
                       /*So el insert termina en error nos vamos por aquí*/
-                      die("errror al insertar data".mysqli_error());
-                    }
+                      echo "Algo pasó. El registro no fue guardado";
 
-                  }
-
-
-
-                  /*No olvidar el cierre de la BD*/
-                  mysqli_close($conn);
                   } else {
+                      echo "El registro fue realizado <br /><br /><a class='boton' href='index.php'>Inicio</a><br/><br />";
+                  }
+                }
+              } else {
                     /*Acá vamos i NO hay info*/
                     include("registro.html");
                   }
             ?>
-
             </div>
 
               <footer>
                  <p>&#128169;</p>
                </footer>
+
 
       </body>
 </html>

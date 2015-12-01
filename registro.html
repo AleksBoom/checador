@@ -1,13 +1,12 @@
                 <div id="registro">
                         <h2>REGISTRO</h2>
-                        <form>
+                        <form action="registro.php" method="GET">
                           <div class="input">
                             <input type="text" placeholder="Usuario" name="usuario" required />
                           </div>
 
                           <div class="input">
                               <input type="text" placeholder="Nombre" name="nombre" required />
-
                           </div>
 
                           <div class="input">
@@ -16,32 +15,78 @@
 
                           <div class="input">
                               <input type="text" placeholder="Apellido Materno" name="apMaterno" required />
-                              <span><i class="fa fa-user"></i></span>
                           </div>
 
                           <div class="input">
-                              <input id="pass" type="password" name="password" placeholder="Contraseña" required />
-                                 <span><i class="fa fa-lock"></i></span>
+                              <input id="pass" type="password" name="password" placeholder="Contraseña" required onkeyup="acciones()">
                           </div>
 
                           <div class="input">
-                              <input type="email" placeholder="E-mail" name="email" required />
-                              <span><i class="fa fa-user"></i></span>
+                              <input id="pass2" type="password" name="password2" placeholder="Confirma tu contraseña" required onkeyup="acciones()"/>
+                          </div>
+                          <div id="msj"></div>
+
+                          <div class="input">
+                              <input id="email" type="email" placeholder="E-mail" name="email" required onkeyup="validaEmail()"/>
+                          </div>
+
+
+                          <div class="input">
+                              <input id="email2" type="email" placeholder="E-mail" name="email2" required onkeyup="validaEmail()"/>
                           </div>
 
                           <div class="sexo">
                             <p>Sexo: M<input type="radio" name="sexo" value="m" required /> H<input type="radio" name="sexo" value="h" required /></p>
                           </div>
-                          <!--!<div id="mensaje"><strong>Lorem Ipsum</strong></div>*/Este es el mensaje que se activaría condicionando los datos-->
-                          <button class="boton" type="submit">¡Listo!</button>
+
+                          <button id="registrar" class="boton" type="submit">¡Listo!</button>
                         </form>
 
+                                          <script>
+                                          function acciones(){
+                                            validaPass();
+                                            validaLong();
 
-                      <!--<input a type="submit" value="Enviar">-->
+                                          }
+
+                                            function validaPass()
+                                              {
+                                                if(password.value==password2.value){
+                                                  registrar.disabled=false;
+                                                }else{
+                                                  registrar.disabled=true;
+                                                }
+                                              }
+
+                                              function validaLong(){
+                                                var pass=document.getElementById('pass').value;
+                                                var long = pass.length;
+                                                var input = document.getElementById('pass');
+                                                var ingresar = document.getElementById('registrar');
+                                                var mensaje= document.getElementById('msj');
+
+                                                if (long >=8){
+                                                    input.style.backgroundColor="#00ff00";
+                                                    ingresar.disable=false;
+                                                    mensaje.innerHTML="";
+                                                } else{
+                                                  input.style.backgroundColor="#ff9999";
+                                                  ingresar.disable=true;
+                                                  mensaje.innerHTML="La contraseña debe tener almenos 8 caracteres";
+                                                }
+
+                                              }
+
+                                              function validaEmail()
+                                              {
+                                                if(email.value==email2.value){
+                                                  registrar.disabled=false;
+                                                }else{
+                                                  registrar.disabled=true;
+                                                }
+                                              }
+
+
+                                          </script>
+
                 </div>
-
-
-              </div>
-                </form>
-
-              </div>
